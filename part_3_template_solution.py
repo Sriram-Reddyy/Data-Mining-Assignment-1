@@ -1,6 +1,8 @@
 import numpy as np
 from numpy.typing import NDArray
 from typing import Any
+
+from sklearn.exceptions import ConvergenceWarning
 import utils as u
 import new_utils as nu
 from sklearn.svm import SVC
@@ -8,7 +10,8 @@ from sklearn.metrics import confusion_matrix,make_scorer, f1_score,accuracy_scor
 from sklearn.utils.class_weight import compute_class_weight
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import StratifiedKFold,cross_val_score,ShuffleSplit
-
+import warnings
+warnings.filterwarnings("ignore", category=ConvergenceWarning)
 """
    In the first two set of tasks, we will narrowly focus on accuracy - 
    what fraction of our predictions were correct. However, there are several 

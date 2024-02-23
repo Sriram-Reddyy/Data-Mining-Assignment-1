@@ -4,6 +4,8 @@
 import numpy as np
 from numpy.typing import NDArray
 from typing import Any
+
+from sklearn.exceptions import ConvergenceWarning
 import utils as u
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
@@ -17,7 +19,8 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import accuracy_score
-
+import warnings
+warnings.filterwarnings("ignore", category=ConvergenceWarning)
 # ======================================================================
 
 # I could make Section 2 a subclass of Section 1, which would facilitate code reuse.
