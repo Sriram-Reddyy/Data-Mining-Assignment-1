@@ -461,5 +461,5 @@ class Section1:
             "accuracy_best_full_testing"
                
         """
-        # The mean accuracy of Cross validation is around 65% where as when the model trained on the enitre set, It has an 100% acccuracy, So it is higher than that of the mean accuracy of CV.
+        # The mean accuracy is around 64% for  Cross validation but when the model is trained on  enitre set, It has  100% acccuracy.
         return answer
